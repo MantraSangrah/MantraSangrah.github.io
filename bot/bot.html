@@ -48,21 +48,20 @@
         text-align: center;
     }
     h1{
-        color: white;
+        color: #333333;
         text-align: center;
     }
     h2{
-        color: #eeeeee;
+        color: #111111;
     }
     p{
-        color: #cccccc;
+        color: #556655;
     }
     b{
-        color: #ee6666;
+        color: #888888;
     }
     
     html, body {
-  background: #1b2832;
   position: absolute;
   overflow: hidden;
   height: 100%;
@@ -157,9 +156,10 @@ button {
     </style>
 <script async>
     function send(){
-        setTimeout(function(){
         document.getElementById('text').opacity=0;
         document.getElementById('loader').display='block';
+        body.style.background='#1b2832';
+        setTimeout(function(){
         location.href='http://sanskrit.pythonanywhere.com/bot/quiz/';
         },1000);
     }
