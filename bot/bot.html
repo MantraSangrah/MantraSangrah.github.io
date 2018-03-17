@@ -14,9 +14,106 @@
 <!--<script src='https://code.responsivevoice.org/responsivevoice.js'></script>-->
 </head>
 <body>
-<iframe width="100%" height="100%" src="http://sanskrit.pythonanywhere.com/bot/quiz/">
-  <p>Sorry! Your browser does not support this.</p>
-</iframe>
+<div id="text">
+    <h1>प्रश्नोत्तरी बोट मे आपका स्वागत है,<h1>
+        <h2>कैसे उपयोग करे</h2>
+        <p>टॉपिक चुनने के लिये टाइप करें ,''टॉपिक'' और टॉपिक संख्या प्रत्युत्तर में दें ,</br>
+            इसमें शहनाज़ क़ुरैशी जी के पूछे गए प्रश्नोत्तरी हैं,<br/>
+    इसके बाद मै उस टॉपिक से संबंधित प्रश्नोत्तरी पूछूंगा जिसके <b>उत्तर आपको संख्या में देने है<b> ,<br/>
+    अन्य किसी प्रकार का उत्तर मान्य नहीं होगा <br/><br/>
+        
+        आशा है आप इससे लाभान्वित होंगे</p>
+        <br/><br/><br/> शुभम् भूयात्
+        
+        <h2>प्रश्नोत्तरी प्रारम्भ करे</h2>
+        <p>प्रश्नोत्तरी के लिए यहां क्लिक करें , अपेक्षा है कि सभी नियमों और शर्तों का आप पालन हो </p>
+        <button class="ripple">START</button>
+</div>
+ <div class="loader" id="loader">
+  <svg>
+    <defs>
+      <filter id="goo">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="2" result="blur" />
+        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 5 -2" result="gooey" />
+        <feComposite in="SourceGraphic" in2="gooey" operator="atop"/>
+      </filter>
+    </defs>
+  </svg>
+</div>
+    
+<style async>
+    html, body {
+  background: #1b2832;
+  position: absolute;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+
+@-webkit-keyframes loader-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes loader-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+.loader {
+  display: hidden;
+  position: absolute;
+  margin: -18px 0 0 -18px;
+  border: 3.6px solid #ff974d;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow: hidden;
+  width: 36px;
+  height: 36px;
+  left: 50%;
+  top: 50%;
+  animation: loader-spin 2s linear infinite reverse;
+  -webkit-filter: url(#goo);
+          filter: url(#goo);
+  -webkit-box-shadow: 0 0 0 1px #ff974d inset;
+          box-shadow: 0 0 0 1px #ff974d inset;
+}
+.loader:before {
+  content: "";
+  position: absolute;
+  -webkit-animation: loader-spin 2s cubic-bezier(0.59, 0.25, 0.4, 0.69) infinite;
+          animation: loader-spin 2s cubic-bezier(0.59, 0.25, 0.4, 0.69) infinite;
+  background: #ff974d;
+  -webkit-transform-origin: top center;
+          transform-origin: top center;
+  border-radius: 50%;
+  width: 150%;
+  height: 150%;
+  top: 50%;
+  left: -12.5%;
+}
+    </style>
+<script async>
+    function send(){
+        document.getElementById('text').opacity=0;
+        document.getElementById('loader').display='block';
+        location.href='http://sanskrit.pythonanywhere.com/bot/quiz/';
+    }
+</script>
+    
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-91929517-5"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
