@@ -26,7 +26,7 @@
         <br/><br/><br/> शुभम् भूयात्
         
         <h2>प्रश्नोत्तरी प्रारम्भ करे</h2>
-        <p>प्रश्नोत्तरी के लिए यहां क्लिक करें , अपेक्षा है कि सभी नियमों और शर्तों का आप पालन हो </p>
+        <p>प्रश्नोत्तरी के लिए यहां क्लिक करें , अपेक्षा है कि सभी नियमों और शर्तों का पालन हो </p>
         <button class="ripple" onclick="send();">START</button>
 </div>
  <div class="loader" id="loader">
@@ -42,15 +42,21 @@
 </div>
     
 <style async>
-    
+    text{
+        transition: opacity 1s ease;
+    }
     h1{
         color: white;
+        text-align: center;
     }
     h2{
         color: #eeeeee;
     }
     p{
         color: #cccccc;
+    }
+    b{
+        color: #ee6666;
     }
     
     html, body {
@@ -149,9 +155,11 @@ button {
     </style>
 <script async>
     function send(){
+        setTimeout(function(){
         document.getElementById('text').opacity=0;
         document.getElementById('loader').display='block';
         location.href='http://sanskrit.pythonanywhere.com/bot/quiz/';
+        },1000);
     }
 </script>
     
