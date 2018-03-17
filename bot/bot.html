@@ -13,7 +13,7 @@
 <meta name="twitter:card" content="sanskrit.pythonanywhere.com">
 <!--<script src='https://code.responsivevoice.org/responsivevoice.js'></script>-->
 </head>
-<body>
+<body id="body">
 <div id="text">
     <h1><u>प्रश्नोत्तरी बोट मे आपका स्वागत है</u><h1>
         <h2>कैसे उपयोग करे</h2>
@@ -160,7 +160,7 @@ button {
     function send(){
         document.getElementById('text').opacity=0;
         document.getElementById('loader').display='block';
-        document.style.background='#1b2832';
+        document.getElementById('body').style.background='#1b2832';
         setTimeout(function(){
         location.href='http://sanskrit.pythonanywhere.com/bot/quiz/';
         },1000);
