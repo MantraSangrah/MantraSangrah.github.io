@@ -27,7 +27,7 @@
         
         <h2>प्रश्नोत्तरी प्रारम्भ करे</h2>
         <p>प्रश्नोत्तरी के लिए यहां क्लिक करें , अपेक्षा है कि सभी नियमों और शर्तों का आप पालन हो </p>
-        <button class="ripple">START</button>
+        <button class="ripple" onclick="send();">START</button>
 </div>
  <div class="loader" id="loader">
   <svg>
@@ -50,6 +50,7 @@
   width: 100%;
   left: 0;
   top: 0;
+  color: white;
 }
 
 @-webkit-keyframes loader-spin {
@@ -74,7 +75,7 @@
   }
 }
 .loader {
-  display: hidden;
+  display: none;
   position: absolute;
   margin: -18px 0 0 -18px;
   border: 3.6px solid #ff974d;
