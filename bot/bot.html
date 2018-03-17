@@ -15,11 +15,11 @@
 </head>
 <body>
 <div id="text">
-    <h1>प्रश्नोत्तरी बोट मे आपका स्वागत है,<h1>
+    <h1><u>प्रश्नोत्तरी बोट मे आपका स्वागत है</u><h1>
         <h2>कैसे उपयोग करे</h2>
         <p>टॉपिक चुनने के लिये टाइप करें ,''टॉपिक'' और टॉपिक संख्या प्रत्युत्तर में दें ,</br>
             इसमें शहनाज़ क़ुरैशी जी के पूछे गए प्रश्नोत्तरी हैं,<br/>
-    इसके बाद मै उस टॉपिक से संबंधित प्रश्नोत्तरी पूछूंगा जिसके <b>उत्तर आपको संख्या में देने है<b> ,<br/>
+    इसके बाद मै उस टॉपिक से संबंधित प्रश्नोत्तरी पूछूंगा जिसके <b>उत्तर आपको संख्या में देने है</b> ,<br/>
     अन्य किसी प्रकार का उत्तर मान्य नहीं होगा <br/><br/>
         
         आशा है आप इससे लाभान्वित होंगे</p>
@@ -27,7 +27,7 @@
         
         <h2>प्रश्नोत्तरी प्रारम्भ करे</h2>
         <p>प्रश्नोत्तरी के लिए यहां क्लिक करें , अपेक्षा है कि सभी नियमों और शर्तों का पालन हो </p>
-        <button class="ripple" onclick="send();">START</button>
+    <center><button class="ripple" onclick="send();">START</button></center>
 </div>
  <div class="loader" id="loader">
   <svg>
@@ -62,6 +62,7 @@
     }
     
     html, body {
+  transition: background 0.3s ease;
   position: absolute;
   overflow: hidden;
   height: 100%;
@@ -140,6 +141,7 @@
 
 /* Button style */
 button {
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
   border: none;
   border-radius: 2px;
   padding: 12px 18px;
@@ -158,7 +160,7 @@ button {
     function send(){
         document.getElementById('text').opacity=0;
         document.getElementById('loader').display='block';
-        body.style.background='#1b2832';
+        document.style.background='#1b2832';
         setTimeout(function(){
         location.href='http://sanskrit.pythonanywhere.com/bot/quiz/';
         },1000);
